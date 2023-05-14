@@ -1,0 +1,72 @@
+body{
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: aliceblue;
+}
+.all{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.title{
+    padding: 10px;
+}
+h1{
+    margin: 2px;
+    color: rgb(39, 39, 74);
+}
+
+
+
+.cat{
+    background-color: rgb(132, 142, 191);
+    border-radius: 10px;
+    width: 30vw;
+    margin: 5px;
+    padding: 10px;
+    height: 100%;
+}
+.cat p{
+    font-weight: bolder;
+    color: aliceblue;
+}
+
+
+.task{
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.task p{
+    color: rgb(39, 39, 74);
+    font-weight: normal;
+    margin: 2px;
+}
+
+button{
+    background-color: rgb(39, 39, 74);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: aliceblue;
+    border-radius: 5px;
+    border: none;
+}
+#menos{
+    background-color: rgb(234, 147, 147);
+}
+#mas{
+    background-color: rgb(132, 142, 191);
+}
+
+input{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(132, 142, 191);
+    border-width: 1px;
+    padding: 5px;
+    
+}
