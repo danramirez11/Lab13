@@ -6,9 +6,12 @@ class Task {
 
     html(pos){
         return `<div class="task">
+        <button class="menos x" onclick="deleteTask(${pos})">X</button>
         <p>${this.desc}</p>
-        <button id="menos" onclick="stepBack(${pos})">-</button>
-        <button id="mas" onclick="updateTask(${pos})">+</button>
+        <div>
+        <button class="menos" onclick="stepBack(${pos})">-</button>
+        <button class="mas" onclick="updateTask(${pos})">+</button>
+        </div>
     </div>`
     }
 }

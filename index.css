@@ -39,6 +39,8 @@ h1{
     padding: 5px;
     border-radius: 5px;
     margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
 }
 .task p{
     color: rgb(39, 39, 74);
@@ -55,11 +57,14 @@ button{
     border-radius: 5px;
     border: none;
 }
-#menos{
+.menos{
     background-color: rgb(234, 147, 147);
 }
-#mas{
+.mas{
     background-color: rgb(132, 142, 191);
+}
+.x{
+    align-self: self-end;
 }
 
 input{

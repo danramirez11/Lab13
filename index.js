@@ -54,9 +54,7 @@ function updateTask(pos) {
         task.status = "DOING"
     } else if (task.status === "DOING") {
         task.status = "DONE"
-    } else if (task.status === "DONE") {
-        listJson.splice(pos, 1);
-      }
+    }
 
     let taskList = []
     for (let i = 0; i < listJson.length; i++) {
@@ -77,9 +75,24 @@ function stepBack(pos){
         task.status = "TODO"
     } else if (task.status === "DONE") {
         task.status = "DOING"
-    } else if (task.status === "TODO") {
-        listJson.splice(pos, 1);
-      }
+    }
+
+    let taskList = []
+    for (let i = 0; i < listJson.length; i++) {
+        const obj = listJson[i]
+        const objTask = new Task(obj.desc, obj.status)
+        taskList.push(objTask)
+    }
+    const listStr = JSON.stringify(taskList)
+    localStorage.setItem("list", listStr)
+    renderAll()
+}
+
+function deleteTask(pos){
+    let list = localStorage.getItem("list")
+    let listJson = JSON.parse(list)
+    let task = listJson[pos]
+    listJson.splice(pos, 1);
 
     let taskList = []
     for (let i = 0; i < listJson.length; i++) {
